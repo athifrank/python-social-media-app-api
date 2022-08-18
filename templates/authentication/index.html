@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+
+    {% for message in messages  %}
+    <b> Message Got :</b> {{message}}
+    {% endfor %}
+
+    <h1> Welcome to my Home page!</h1>
+
+    {% if user.is_authenticated %}
+
+    <h1> Hello {{fname}}</h1>
+    <h3> You're successfully logged in</h3>
+    <button type='submit'> <a href="signout"> SIGN OUT </a> </button>
+
+    {% else %}
+    <button type='submit'> <a href="signup"> SIGN UP </a> </button>
+    <button type='submit'> <a href="signin"> SIGN IN </a> </button>
+
+    {% endif %}
+
+
+
+
+
+<!--  <button type="submit"> <a href="signup">SignUp</a></button>
+    <button type="submit"> <a href="signin">SignIn</a></button>
+    <button type="submit"> <a href="#">SignOut</a></button>  -->
+   
+    
+    
+</body>
+</html>
